@@ -13,14 +13,6 @@
 
 ---
 
-## 📸 Example in Action
-
-![PHP Snippets Demo](images/php-snippets-demo.gif)
-
-> *Above: Snippets for `phpfn`, `try`, and `foreach` in action.*
-
----
-
 ## 🚀 Snippet List
 
 | Prefix       | Description                          |

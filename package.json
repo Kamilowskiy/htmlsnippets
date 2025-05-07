@@ -1,24 +1,41 @@
 {
-  "name": "phpsnippets",
-  "displayName": "phpSnippets",
+  "name": "phpsimplesnippets",
+  "displayName": "PHP Simple Snippets",
   "description": "Simple and Quick PHP Snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.99.0"
   },
-  "categories": [
-    "Snippets",
-    "Other"
-  ],
+  "publisher": "Kamilowskiy",
+  "homepage": "https://github.com/Kamilowskiy/phpSnippets",
+    "bugs": {
+        "url": "https://github.com/Kamilowskiy/phpSnippets/issues",
+        "email": "devwarior@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Kamilowskiy/phpSnippets"
+    },
+    "categories": [
+        "Snippets",
+        "Other"
+	],
+    "keywords": [
+        "php",
+        "php snippets",
+        "snippets",
+        "intellisense",
+        "php intellisense"
+    ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "snippets": [
-    {
-      "language": "php",
-      "path": "./snippets/php.code-snippets"
-    }
-  ]
+      {
+        "language": "php",
+        "path": "./snippets/php.code-snippets"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
