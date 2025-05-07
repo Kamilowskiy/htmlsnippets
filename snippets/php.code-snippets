@@ -1,0 +1,140 @@
+{
+    "Echo Statement": {
+      "prefix": "echo",
+      "body": ["echo \"${1:text}\";"],
+      "description": "Displays text with echo"
+    },
+    "PHP Function": {
+      "prefix": "phpfn",
+      "body": [
+        "function ${1:name}(${2:$parameters}) {",
+        "    ${3:// function body}",
+        "}"
+      ],
+      "description": "Makes a function"
+    },
+    "If Statement": {
+      "prefix": "if",
+      "body": [
+        "if (${1:$condition}) {",
+        "    ${2:// instructions}",
+        "}"
+      ],
+      "description": "Condition statement if"
+    },
+    "Foreach Loop": {
+      "prefix": "foreach",
+      "body": [
+        "foreach (${1:$array} as ${2:$key} => ${3:$value}) {",
+        "    ${4:// loop body}",
+        "}"
+      ],
+      "description": "Foreach loop"
+    },
+    "PDO Select": {
+      "prefix": "pdoselect",
+      "body": [
+        "$stmt = $pdo->prepare(\"SELECT * FROM ${1:table} WHERE ${2:column} = :${2:column}\");",
+        "$stmt->execute([':${2:column}' => ${3:$value}]);",
+        "$results = $stmt->fetchAll();"
+      ],
+      "description": "PDO query"
+    },
+    "PHP: Include file": {
+        "prefix": "include",
+        "body": [
+            "include '${1:filename}.php';"
+        ],
+        "description": "Include a PHP file"
+    },
+    "PHP: Require once": {
+        "prefix": "require",
+        "body": [
+            "require_once '${1:filename}.php';"
+        ],
+        "description": "Require a PHP file once"
+    },
+    "PHP: Class definition": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName} {",
+            "    public function __construct() {",
+            "        ${2:// Initialization code...}",
+            "    }",
+            "",
+            "    public function ${3:methodName}(${4:}) {",
+            "        ${5:// code...}",
+            "    }",
+            "}"
+        ],
+        "description": "Define a PHP class"
+    },
+    "PHP: Try Catch block": {
+        "prefix": "try",
+        "body": [
+            "try {",
+            "    ${1:// code...}",
+            "} catch (${2:Exception} $${3:e}) {",
+            "    echo 'Error: ' . $${3:e}->getMessage();",
+            "}"
+        ],
+        "description": "Try-catch block"
+    },
+    "PHP: JSON Response (API)": {
+        "prefix": "jsonres",
+        "body": [
+            "header('Content-Type: application/json');",
+            "echo json_encode(${1:$data});"
+        ],
+        "description": "Return JSON response"
+    },
+    "PHP: Redirect": {
+        "prefix": "redirect",
+        "body": [
+            "header('Location: ${1:/path/to/page.php}');",
+            "exit;"
+        ],
+        "description": "Redirect to another page"
+    },
+    "PHP: DateTime now": {
+        "prefix": "now",
+        "body": [
+            "$now = new DateTime();",
+            "echo $now->format('Y-m-d H:i:s');"
+        ],
+        "description": "Current date and time using DateTime"
+    },
+    "PHP: Session start": {
+        "prefix": "session",
+        "body": [
+            "session_start();",
+            "// $_SESSION['user'] = 'example';"
+        ],
+        "description": "Start PHP session"
+    },
+    "PHP: Ternary operator": {
+        "prefix": "ternary",
+        "body": [
+            "${1:result} = (${2:condition}) ? ${3:trueValue} : ${4:falseValue};"
+        ],
+        "description": "Ternary operator"
+    },
+    "PHP: For loop": {
+        "prefix": "for",
+        "body": [
+            "for ($${1:i} = 0; $${1:i} < ${2:count}; $${1:i}++) {",
+            "    ${3:// code...}",
+            "}"
+        ],
+        "description": "Basic for loop"
+    },
+    "PHP: Define constant": {
+        "prefix": "define",
+        "body": [
+            "define('${1:CONSTANT_NAME}', '${2:value}');"
+        ],
+        "description": "Define a PHP constant"
+  },
+}      
+
+  

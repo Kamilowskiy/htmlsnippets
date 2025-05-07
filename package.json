@@ -17,7 +17,13 @@
         "command": "phpDocViewer.showDoc",
         "title": "PHP: Simple but complicated docs"
       }
-    ]
+    ],
+    "snippets": [
+    {
+      "language": "php",
+      "path": "./snippets/php.code-snippets"
+    }
+  ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
