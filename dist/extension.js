@@ -30,40 +30,23 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/extension.ts
 var extension_exports = {};
 __export(extension_exports, {
-  activate: () => activate
+  activate: () => activate,
+  deactivate: () => deactivate
 });
 module.exports = __toCommonJS(extension_exports);
 var vscode = __toESM(require("vscode"));
-var path = __toESM(require("path"));
-var fs = __toESM(require("fs"));
 function activate(context) {
-  let disposable = vscode.commands.registerCommand("phpDocViewer.showDoc", async () => {
-    const panel = vscode.window.createWebviewPanel(
-      "phpDocumentation",
-      "PHP Documentation",
-      vscode.ViewColumn.Beside,
-      {
-        enableScripts: true,
-        localResourceRoots: [
-          vscode.Uri.file(path.join(context.extensionPath, "media"))
-        ]
-      }
-    );
-    const indexPath = vscode.Uri.file(path.join(context.extensionPath, "media/php-doc/index.html"));
-    const html = fs.readFileSync(indexPath.fsPath, "utf8");
-    const baseUri = panel.webview.asWebviewUri(
-      vscode.Uri.file(path.join(context.extensionPath, "media/php-doc"))
-    );
-    const transformedHtml = html.replace(
-      /<head>/,
-      `<head><base href="${baseUri}/">`
-    );
-    panel.webview.html = transformedHtml;
+  console.log('Congratulations, your extension "phpSnippets" is now active!');
+  const disposable = vscode.commands.registerCommand("phpSnippets.helloWorld", () => {
+    vscode.window.showInformationMessage("Hello World from phpSnippets!");
   });
   context.subscriptions.push(disposable);
 }
+function deactivate() {
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  activate
+  activate,
+  deactivate
 });
 //# sourceMappingURL=extension.js.map
