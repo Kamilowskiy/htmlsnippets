@@ -3,6 +3,7 @@
   "displayName": "PHP Simple Snippets",
   "description": "Simple and Quick PHP Snippets",
   "version": "1.0.1",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.99.0"
   },
