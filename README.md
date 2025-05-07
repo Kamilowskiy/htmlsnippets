@@ -58,7 +58,7 @@ Please report bugs or ideas for improvements via GitHub Issues.
 
 ## 📦 Release Notes
 
-### 1.0.0
+### 1.0.2
 
 - ✅ Added over 15 ready-to-use PHP snippets.
 
